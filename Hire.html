@@ -9,28 +9,39 @@
   </head>
   <body>
     <div class="contain">
-      <form onsubmit="sendEmail(); reset(); return false;">
+      <form name="submit-to-google-sheet" action="https://formspree.io/f/xyyaaewe" method="POST">
         <h3>GET IN TOUCH</h3>
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Email Id" required />
-        <input type="text" id="phone" placeholder="Phone no." required />
-        <textarea id="message" rows="4" placeholder="Your message"></textarea>
-        <button type="submit">Submit</button>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Id"
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Phone no."
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Your message"
+        ></textarea>
+        <button type="submit" class="button">Submit</button>
       </form>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail() {
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "arunacharya1603@gmail.com",
-          Password: "Susu@Anki$9873",
-          To: "arunacharya1603@gmail.com",
-          From: document.getElementById("email").value,
-          Subject: "New Contact form!!",
-          Body: "dgfdgg",
-        }).then((message) => alert(message));
-      }
-    </script>
+
+   
   </body>
 </html>
